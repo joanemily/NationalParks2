@@ -1,0 +1,305 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: cornsilk; /*Bryan Edit*/
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+.container {
+    max-height: 500px;
+}
+
+#headerlogo {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+#grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.park {
+    flex-basis: auto;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+    border: solid 1px gray;
+    background-color: cornsilk; /*Bryan Edit*/
+}
+
+#parkphoto {
+    padding: 5px;
+}
+
+#parkinfo {
+    padding: 5px;
+}
+
+
+#park {
+    color: black;
+    text-decoration: none;
+}
+
+    #park:hover {
+        text-decoration: none !important;
+        border: 0 !important;
+        color: black;
+        text-decoration-line: unset;
+    }
+
+#parkname {
+    font-family: Candara, Arial, Helvetica, sans-serif;
+    font-size:larger;
+    font-weight: bolder;
+}
+
+#parkinfo > h5 {
+    font-family: Candara, Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+.park {
+    transition: all .2s ease-in-out;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+    .park:hover {
+        transform: scale(0.95);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+.detailphoto {
+    width: 100%;
+    margin: auto;
+}
+
+
+@media screen and (min-width: 950px) {
+    .parkNameDetail {
+        font-family: Candara, Arial, Helvetica, sans-serif;
+        text-align: center;
+        width: 100%;
+        font-size: 50px;
+    }
+}
+@media screen and (max-width: 949px) {
+    .parkNameDetail {
+        font-family: Candara, Arial, Helvetica, sans-serif;
+        text-align: center;
+        width: 100%;
+        font-size: 26px;
+    }
+}
+
+@media screen and (min-width: 950px) {
+    #name > h4 {
+        font-family: Candara, Arial, Helvetica, sans-serif;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 949px) {
+    #name > h4 {
+        font-family: Candara, Arial, Helvetica, sans-serif;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 950px) {
+    #quote {
+        font-family: Candara, Arial, Helvetica, sans-serif;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 949px) {
+    #quote {
+        font-family: Candara, Arial, Helvetica, sans-serif;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+h5 {
+    font-family: Candara, Arial, Helvetica, sans-serif;
+}
+
+#description {
+    margin-top: 10px;
+    text-emphasis-color: black;
+}
+
+
+#weather {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.days {
+    flex: 0 0 100%;
+    margin: 4px;
+    max-width: 20%;
+    text-align: center;
+}
+
+#today {
+    flex: 0 0 20%;
+    text-align: center;
+}
+
+#todayImg {
+    width: 100%;
+    height: auto;
+}
+
+.daysImg {
+    width: 50%;
+    height: auto;
+}
+
+.days h5 {
+    font-size: 12px;
+}
+
+.days p {
+    font-size: 10px;
+}
+
+
+#resultpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+#results {
+    flex-basis: auto;
+    display: grid;
+    max-height: 200px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "img park count";
+    margin: 50px;
+}
+
+#resultimg {
+    padding: 10px;
+    grid-area: img;
+}
+
+#imgpark {
+    height: 200px;
+    float: right;
+    padding: 5px;
+    border: solid 1px black;
+}
+
+#resultpark {
+    grid-area: park;
+    padding: 10px;
+    vertical-align: baseline;
+}
+
+    #resultpark h3 {
+        font-size: medium;
+        text-align: center;
+        padding: 5px;
+        border: solid 1px black;
+    }
+
+#resultcount {
+    grid-area: count;
+    padding: 10px;
+    vertical-align: baseline;
+}
+
+    #resultcount h3 {
+        font-size: medium;
+        text-align: center;
+        padding: 5px;
+        border: solid 1px black;
+    }
+
+.tempSubmit {
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    text-decoration: none;
+    
+}
+
+    .tempSubmit:hover {
+        box-shadow: 2px 4px gray;
+        position: relative;
+        bottom: 1px;
+        right: 1px;
+    }
+
+.surveyButton {
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    text-decoration: none;
+    margin-left: 40px;
+}
+.surveyButton:hover {
+    box-shadow: 2px 4px gray;
+    position: relative;
+    bottom: 1px;
+    right: 1px;
+}
+
+.advice {
+    color: blue;
+}
+
+.warning {
+    color: red;
+}
+
+#today > h3 {
+    font-family: Candara, Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 100%;
+}
